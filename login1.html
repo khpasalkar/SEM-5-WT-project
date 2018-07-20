@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>
+log in
+</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+<script>
+function validateform(){
+var name=document.myform.username.value;
+var password=document.myform.password.value;
+if (name==null || name==""){
+alert("Name can't be blank");
+return false;
+}else if(password.length<6){
+alert("Password must be at least 6 characters long.");
+return false;
+}
+}
+</script>
+</head>
+<body bgcolor="311F1B">
+<h3><a href="home.html">GO BACK TO HOME</a></h3>
+<br>
+<div id="text">
+<div id="border">
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+<table cellpadding="3">
+<tr><h1 align="left" ><font color="black">&nbsp&nbsp&nbspLog In</font></h1> </tr>
+<tr><td align="left">&nbsp&nbsp&nbspUsername:</td>
+</tr>
+<tr>
+<td align="left">&nbsp&nbsp&nbsp<input type="text" size="35px" name="username"/></td>
+</tr>
+<tr><td align="left">&nbsp&nbsp&nbspPassword:</td>
+</tr>
+<tr>
+<td align="left">&nbsp&nbsp&nbsp<input type="password" size="35px" name="password"/></td>
+</tr>
+<tr>
+<td align="left">&nbsp&nbsp&nbsp<button type="submit">Submit</button></td>
+<td><a href="grocery1.html">Forgot Password?</a></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>
